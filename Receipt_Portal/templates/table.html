@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <!-- Title Page-->
+    <title>Receipt Reader</title>
+
+    <!-- Icons font CSS-->
+    <link href="{% static 'vendor/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{% static 'vendor/select2/select2.min.css' %}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'scss/table.css' %}" rel="stylesheet" media="all">
+    
+    <meta name="description" content="Bootstrap.">  
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    
+    <script src="{% static 'js/jquery.dataTables.min.js' %}" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+        <div class="wrapper wrapper--w960">
+            <div class="card card-2">
+                <div class="card-body">
+                    <h2 class="title" style="text-align: center;">Receipt Information</h2>
+                    
+                      <table id="myTable">
+                          <thead>
+                            <tr>
+                              <th>Name</th>
+                              <th>Employee ID</th>
+                              <th>Service Name</th>
+                              <th>Receipt Image</th>
+                              <th>Amount</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><strong>Loreum Ipsum</strong></td>
+                              <td>1</td>
+                              <td>Restaurent</td>
+                              <td>Image</td>
+                              <td>INR 25</td>
+                            </tr>
+                            
+                            <tr>
+                              <td><strong>Loreum Ipsum</strong></td>
+                              <td>1</td>
+                              <td>Restaurent</td>
+                              <td>Image</td>
+                              <td>INR 25</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Loreum Ipsum</strong></td>
+                              <td>1</td>
+                              <td>Restaurent</td>
+                              <td>Image</td>
+                              <td>INR 25</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Loreum Ipsum</strong></td>
+                              <td>1</td>
+                              <td>Restaurent</td>
+                              <td>Image</td>
+                              <td>INR 25</td>
+                            </tr>
+                          </tbody>
+                      </table>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <!-- Vendor JS-->
+    <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+    
+
+    <!-- Main JS-->
+       
+    <script type="text/javascript" src="~/Scripts/jquery.js"></script>
+    <script type="text/javascript" src="~/Scripts/data-table/jquery.dataTables.js"></script>
+
+
+
+    <script>
+      $(document).ready(function(){
+        $.noConflict();
+        var table = $('#myTable').DataTable({sDom: 'lrtip'});
+        
+      });
+      </script>
+
+</body>
+
+</html>
+<!-- end document-->

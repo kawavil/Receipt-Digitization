@@ -57,7 +57,7 @@ ROOT_URLCONF = 'Receipt_Digitization_with_OCR.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'Receipt_Portal/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,32 +75,7 @@ WSGI_APPLICATION = 'Receipt_Digitization_with_OCR.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-"""
-DATABASES = {
-        'default': {
-            'ENGINE': 'djongo',
-            'NAME': 'Receipt_Digitization',
-            'ENFORCE_SCHEMA': False,
-            'CLIENT': {
-                'host': 'cluster0-shard-00-02.pifkd.mongodb.net',
-                'port': 27017,
-                'username': 'kawavil',
-                'password': 'Kawa@2020',
-                'authSource': 'Receipt_Digitization',
-                'authMechanism': 'SCRAM-SHA-1'
-            },
-            'LOGGING': {
-                'version': 1,
-                'loggers': {
-                    'djongo': {
-                        'level': 'DEBUG',
-                        'propagate': False,
-                    }
-                },
-             },
-        }
-    }
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',

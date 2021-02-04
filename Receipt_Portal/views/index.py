@@ -8,3 +8,8 @@ class Index(View):
         context = {}
         return render(request, 'index.html', context)
 
+    def post(self, request):
+        context = {}
+        return render(request, 'index.html', context)
+
+
